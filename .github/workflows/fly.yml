@@ -12,7 +12,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: superfly/flyctl-actions/setup-flyctl@master
-      - run: flyctl deploy --remote-only
+      - run: flyctl deploy --remote-only -a chatbot24462780
         env:
           FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
-          APP: ${{ vars.APP_NAME}}
